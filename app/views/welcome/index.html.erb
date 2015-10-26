@@ -1,0 +1,9 @@
+<ul>
+  <% unless user_signed_in? %>
+    <%= link_to "Zaloguj się", new_user_session_path  %>
+    <%= link_to "Zarejestruj się", new_user_registration_path  %>
+  <% else %>
+    <%= link_to "Wyloguj się", destroy_user_session_path, method: :delete  %>
+  <% end %>
+
+</ul>
